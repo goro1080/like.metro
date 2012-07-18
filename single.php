@@ -4,8 +4,6 @@ if (have_posts()) :
 	the_post(); ?>
 <?php	if (is_WP()): ?>
 	<div id="wp-primary">
-<?php 	else: ?>
-	<div id="primary">
 <?php	endif; ?>
 <article>
 	<header>
@@ -38,7 +36,9 @@ if (have_posts()) :
 		}
 ?>
 		; <span class="entry-post-comment-number"><?php echo comments_number(); ?></span>
+<?php	if (is_WP()): ?>
 </div>
+<?php	endif; ?>
 
 <?php comments_template(); ?>
 
