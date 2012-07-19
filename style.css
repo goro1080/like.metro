@@ -158,7 +158,7 @@ div.sharing ul li{
 	border-left: none;
 	margin: 10px 0;
 	padding: 5px;
-	overflow: none;
+	overflow: visible;
 }
 
 div.wp-entry-body {
