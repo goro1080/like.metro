@@ -127,6 +127,7 @@ div.entry-body ul li,div.entry-body ol li {
 	list-style-position: inside;
 	margin: 10px 0;
 	padding: 5px;
+	overflow: auto;
 }
 
 div.entry-body {
