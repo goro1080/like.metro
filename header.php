@@ -36,7 +36,12 @@
 <?php 
 wp_head();
 ?>
-<body <?php body_class(); ?>>
+<body <?php 
+if (! is_WP()):
+	body_class('');
+else:
+	body_class('wp-single');
+endif; ?>>
 <div id="header" role="banner">
 <?php	if (is_WP()): ?>
 	<div id="wp-headerimg">

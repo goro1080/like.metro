@@ -25,6 +25,10 @@ if (have_posts()) :
 <?php		endif; ?>
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		<div class="entry-post-date">posted at <?php echo get_the_date($d); ?></div>
+	<?php		if ( has_post_format('gallery') ):
+				$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
+printf( '<div class="gallerycaption">このギャラリーには%1$s枚の画像があります</div>',count($images));
+			endif; ?>
 	</header>
 
 <?php		if (! is_WP()) : ?>
@@ -50,7 +54,7 @@ if (have_posts()) :
 	</article>
 
 <?php	endwhile; ?>
-	<span class="clear"></span>
+
 	</div>
 <?php endif; ?>
 <?php

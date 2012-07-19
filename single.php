@@ -2,9 +2,6 @@
 get_header();
 if (have_posts()) :
 	the_post(); ?>
-<?php	if (is_WP()): ?>
-	<div id="wp-primary">
-<?php	endif; ?>
 <article>
 	<header>
 <?php		if (! is_WP()) : ?>
@@ -18,11 +15,19 @@ if (have_posts()) :
 	</header>
 <?php
 	if ( has_post_thumbnail() ) {
-		the_post_thumbnail();
+		if (! is_WP()) {
+			the_post_thumbnail();
+		} else {
+			the_post_thumbnail( array(480,480));
+		}
 	}
 ?>
 
+<?php		if (! is_WP()) : ?>
 	<div class="entry-body">
+<?php		else : ?>
+	<div class="wp-entry-body">
+<?php		endif; ?>
 	<?php the_content(); ?>
 	</div>
 </article>
@@ -36,9 +41,6 @@ if (have_posts()) :
 		}
 ?>
 		; <span class="entry-post-comment-number"><?php echo comments_number(); ?></span>
-<?php	if (is_WP()): ?>
-</div>
-<?php	endif; ?>
 
 <?php comments_template(); ?>
 

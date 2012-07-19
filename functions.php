@@ -1,5 +1,15 @@
 <?php
 
+add_action( 'after_setup_theme', 'like_metro_setup' );
+
+if ( ! function_exists( 'like_metro_setup' ) ){
+	function like_metro_setup() {
+	        add_theme_support( 'post-formats', array('gallery') );
+
+	}
+}
+
+
 if ( ! function_exists('is_WP') ) {
 	function is_WP() {
 		return preg_match('/IEMobile/i',$_SERVER['HTTP_USER_AGENT']);
