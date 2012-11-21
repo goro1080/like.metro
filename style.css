@@ -120,16 +120,30 @@ div#wp-primary {
 	overflow: auto;
 }
 
+div.entry-body ul,
+div.entry-body ol {
+        list-style-image:url("./img/square.png");
+        list-style-postion: inside;
+}
+
 div.entry-body ul li,
 div.entry-body ol li {
-	display: block;
-	list-style-type: none;
-	border-left: solid 30px #1ba1e2;
-	height: 20px;
-	list-style-position: inside;
-	margin: 10px 0;
-	padding: 5px;
-	overflow: auto;
+        height: auto;
+        width: auto;
+        padding: 4px;
+        margin: 4px;
+}
+
+div.entry-body ul li pre,
+div.entry-body ol li pre {
+	margin-left: 15px;
+	padding-left: 40px;
+}
+
+div.entry-body ul li p,
+div.entry-body ol li p {
+	margin-left: 15px;
+	padding-left: 25px;
 }
 
 div.entry-body {
@@ -152,7 +166,7 @@ div.right-nav{
 	float: right;
 }
 
-div.sharing ul li{
+div.sd-sharing ul li{
 	display: block;
 	list-style-type: none;
 	border-left: none;
@@ -168,6 +182,7 @@ div.wp-entry-body {
 
 
 h2#wp-entry-title {
+	text-transform: none;
 	border-left-style:solid;
 	border-left-color:#1ba1e2;
 	border-left-width:40px;
@@ -254,8 +269,8 @@ a.more-link:hover {
 
 blockquote pre {
 	border: none;
-	margin: 0px;
-	paddin: 0px;
+	marging: 0px;
+	padding: 0px;
 	overflow: visible;
 }
 
@@ -281,7 +296,7 @@ pre {
 	padding: 15px;
 	border: 1px solid #aaaaaa;
 	background: #fafafa;
-	overflow: scroll;
+	overflow: auto;
 }
 
 

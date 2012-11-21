@@ -521,7 +521,7 @@ textarea {
   font-weight: 100;
   margin-top: 5px;
   margin-bottom: 0px;
-  text-transform: lowercase;
+  text-transform: none;
 }
 body {
   font-family: "Segoe UI", "Segoe WP", "Helvetica Neue", 'RobotoRegular', sans-serif;
@@ -537,7 +537,7 @@ h6 {
   font-weight: 100;
   margin-top: 5px;
   margin-bottom: 0px;
-  text-transform: lowercase;
+  text-transform: none;
 	display: inline;
 }
 h1 {
@@ -553,7 +553,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  text-transform: uppercase;
+  text-transform: none;
 }
 div#headerimg div.description {
 	font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
@@ -577,14 +577,14 @@ div.entry-body ol li {
   list-style-position: inside;
   margin: 10px 0;
   padding: 5px;
-}
+} 
 div.entry-body ul {
   overflow: hidden;
-}
+} 
 div.entry-body ol {
   text-indent: -25px;
   counter-reset: item;
-}
+} 
 div.entry-body ol li:before {
   color: white;
   margin-right: 25px;
@@ -676,7 +676,7 @@ metro-pivot .headers {
   font-weight: 100;
   margin-top: 5px;
   margin-bottom: 0px;
-  text-transform: lowercase;
+  text-transform: none;
   cursor: pointer;
   display: inline-block;
   font-size: 42px;
@@ -695,7 +695,7 @@ metro-pivot .headers {
   font-weight: 100;
   margin-top: 5px;
   margin-bottom: 0px;
-  text-transform: lowercase;
+  text-transform: none;
   font-size: 42px;
   display: inline-block;
   vertical-align: top;
@@ -765,7 +765,7 @@ nav ul a {
   color: #aaaaaa;
   font-size: 22.400000000000002px;
   text-decoration: none;
-  text-transform: lowercase;
+  text-transform: none;
 }
 nav ul a.active {
   color: #000000;
@@ -801,7 +801,7 @@ article {
   clear: both;
 }
 .date {
-  text-transform: uppercase;
+  text-transform: none;
 }
 section.title {
   float: left;
